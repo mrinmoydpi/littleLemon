@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  font-family: 'Karla', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #f4ce14;
+  border: 0;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 16px;
+  width: auto;
+}
+
+.btn a:link, .btn a:visited, .btn a:hover, .btn a:active {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-order {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  text-align: left;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  padding: 0;
+  position: relative;
+}
+
+header > .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+}
+
+.grid-item-brand {
+  grid-column: span 12;
+  justify-self: center;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav a:link, nav a:visited {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #f4ce14;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:active {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#main-nav.shown {
+  background-color: #fff;
+  border: 1px solid black;
+  display: block;
+  margin: 0;
+  padding: 20px;
+  z-index: 10000;
+}
+
+#main-nav.shown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav.shown #close-nav {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.nav-hamburger {
+  background: none;
+  border: none;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 30px;
+}
+
+.nav-hamburger img {
+  max-width: 100%;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+main > .container {
+  padding: 16px;
+}
+
+#hero {
+  background-color: #495E57;
+  line-height: 1;
+}
+
+#hero > .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero-text {
+  display: grid;
+  grid-column: span 6;
+}
+
+.hero-text h1 {
+  color: #f4ce14;
+  font-family: 'Markazi Text';
+  font-size: 64pt;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-text h2 {
+  color: #fff;
+  font-family: 'Markazi Text';
+  font-size: 40pt;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-text p {
+  color: #fff;
+  font-size: 18pt;
+  line-height: 1.2;
+}
+
+.hero-img {
+  border-radius: 20px;
+  display: grid;
+  grid-column: span 6;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.hero-img img {
+  max-width: 100%;
+}
+
+.specials-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.specials-header-text {
+  display: grid;
+  grid-column: span 6;
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+.specials-header-button {
+  display: grid;
+  grid-column: span 6;
+}
+
+.special-items {
+  display: block;
+}
+
+.special-item {
+  background-color: #edefee;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.special-item figure {
+  margin: 0;
+  max-height: 160px;
+  overflow: hidden;
+  padding: 0;
+}
+
+
+.special-item figure img {
+  width: 100%;
+}
+
+.special-item-content {
+  padding: 16px;
+}
+
+.special-item-price {
+  color: #ee9972;
+  float: right;
+}
+
+.special-item-description {
+  color: #495E57;
+  line-height: 1.5;
+}
+
+.reservation-form {
+  display: grid;
+  gap: 20px;
+  max-width: 200px;
+}
+
+.error {
+  color: #ee9972;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+footer > .container {
+  padding: 16px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .grid-item-brand {
+    grid-column: span 2;
+  }
+
+  nav {
+    border: none;
+    display: grid;
+    grid-column: span 10;
+    justify-self: end;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+
+  .nav-hamburger {
+    display: none;
+  }
+
+  #close-nav {
+    display: none;
+  }
+
+  main > .container {
+    padding: 0;
+  }
+
+  .special-items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .special-item {
+    display: grid;
+    grid-column: span 4;
+  }
+
+  footer > .container {
+    padding: 0;
+  }
+}
